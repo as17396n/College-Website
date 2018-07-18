@@ -1,0 +1,330 @@
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="academicinfo.aspx.cs" Inherits="WebApplication1.academicinfo" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<head id="Head1" runat="server">
+    <title></title>
+    <link href="~/Styles/Site.css" rel="stylesheet" type="text/css" />
+    <style type="text/css">
+        .style1
+        {
+            display: block;
+            float: left;
+            text-align: left;
+            width: 958px;
+        }
+        .style3
+        {
+            position: relative;
+            margin: 0px;
+            padding: 0px;
+    
+            width: 100%;
+            left: 0px;
+            top: 0px;
+        }
+        .style4
+        {
+            font-size: 1.1em;
+            display: block;
+            text-align: right;
+            padding: 10px;
+            color: White;
+            width: 942px;
+        }
+        .style5
+        {
+          
+            text-align: center;
+            width: 960px;
+        }
+        .style6
+        {
+            text-align: center;
+            width: 960px;
+            font-family: Algerian;
+        }
+        .style7
+        {
+            width: 100%;
+            border: 2px solid #000000;
+            background-color: #9FAFBC;
+        }
+        .style8
+        {
+            width: 100%;
+            border: 2px solid #000000;
+            background-color: #3A4F63;
+        }
+        .style9
+        {
+            color: #000000;
+            text-align: center;
+            font-size: large;
+        }
+        .style10
+        {
+            text-align: center;
+        }
+        .style11
+        {
+            color: #000000;
+            font-size: medium;
+        }
+    </style>
+</head>
+<body>
+    <form id="Form1" runat="server">
+    <div class="page">
+        <div class="style3">
+            <div class="style1">
+                <h1 class="style5" 
+                    
+                    style="padding: 0px; margin: 0px; font-size: 32px; font-family: 'Times New Roman', Times, serif; letter-spacing: 1px; font-weight: normal; text-shadow: rgb(102, 102, 102) 0px 0px 1px; line-height: 35px; color: rgb(0, 0, 0); font-style: normal; font-variant: normal; orphans: auto; text-indent: 0px; text-transform: none; white-space: normal; widows: auto; word-spacing: 0px; -webkit-text-stroke-width: 0px; ">
+                    &nbsp;</h1>
+                <h1 class="style6" 
+                    
+                    
+                    style="padding: 0px; margin: 0px; font-size: 32px; letter-spacing: 1px; font-weight: normal; text-shadow: rgb(102, 102, 102) 0px 0px 1px; line-height: 35px; color: rgb(0, 0, 0); font-style: normal; font-variant: normal; orphans: auto; text-indent: 0px; text-transform: none; white-space: normal; widows: auto; word-spacing: 0px; -webkit-text-stroke-width: 0px; ">
+                   MOTILAL JHUNJHUNWALA<span class="Apple-converted-space">&nbsp;</span><br 
+                        style="padding: 0px; margin: 0px;" />
+                    College of<span class="Apple-converted-space">&nbsp;</span><br 
+                        style="padding: 0px; margin: 0px;" />
+                    Arts, Commerce and Science</h1>
+                <h3 class="style6" 
+                    
+                    
+                    style="padding: 35px 0px 20px; margin: 0px; font-size: 20px; font-weight: normal; color: rgb(0, 0, 0); text-shadow: rgb(0, 0, 0) 0px 0px 0px; font-family: 'Myriad Pro Light SemiCond'; font-style: normal; font-variant: normal; letter-spacing: normal; line-height: 18.2000007629395px; orphans: auto; text-indent: 0px; text-transform: none; white-space: normal; widows: auto; word-spacing: 0px; -webkit-text-stroke-width: 0px; ">
+                    Affiliated to University of Mumbai
+                </h3>
+            </div>
+            <div class="style4">
+               
+                <asp:Label ID="Label1" runat="server" ForeColor="Black" 
+                    Text="WELCOME.....STUDENT!"></asp:Label>
+               
+            </div>
+            <div class="clear hideSkiplink">
+                <asp:Menu ID="NavigationMenu" runat="server" CssClass="menu" EnableViewState="false" IncludeStyleBlock="false" Orientation="Horizontal">
+                    <Items>
+                        <asp:MenuItem Text="PROFILE" Value="PROFILE" NavigateUrl="~/student.aspx">
+                            <asp:MenuItem Text="PERSONAL INFO" Value="PERSONAL INFO" 
+                                NavigateUrl="~/personalinfo.aspx"></asp:MenuItem>
+                            <asp:MenuItem Text="ACADEMIC INFO" Value="ACADEMIC INFO" 
+                                NavigateUrl="~/academicinfo.aspx"></asp:MenuItem>
+                        </asp:MenuItem>
+                        <asp:MenuItem Text="DOWNLOAD" Value="DOWNLOAD" NavigateUrl="~/download.aspx"/>
+                        <asp:MenuItem Text="CHANGE PASSWORD" Value="CHANGE PASSWORD" 
+                            NavigateUrl="~/changepassword.aspx"></asp:MenuItem>
+                        <asp:MenuItem Text="LOGOUT" Value="LOGOUT" NavigateUrl="~/Default.aspx"></asp:MenuItem>
+                    </Items>
+                </asp:Menu>
+            </div>
+        </div>
+        <div class="main">
+          
+            <table class="style8">
+                <tr>
+                    <td class="style9">
+                        ACADEMIC INFO</td>
+                </tr>
+            </table>
+            <br />
+            <div class="style10">
+          
+            <asp:Panel ID="Panel1" runat="server" Height="705px" CssClass="style11">
+                <table class="style7" bgcolor="#3A4F63" border="2">
+                    <tr>
+                        <td bgcolor="#3A4F63">
+                            SEMESTER-I</td>
+                        <td bgcolor="#3A4F63">
+                            SEMESTER-II</td>
+                        <td bgcolor="#3A4F63">
+                            SEMESTER-III</td>
+                        <td bgcolor="#3A4F63">
+                            SEMESTER-IV</td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <asp:DetailsView ID="DetailsView1" runat="server" AutoGenerateRows="False" 
+                                CellPadding="4" DataSourceID="SqlDataSource1" ForeColor="#333333" 
+                                GridLines="None" Height="50px" Width="125px">
+                                <AlternatingRowStyle BackColor="White" />
+                                <CommandRowStyle BackColor="#C5BBAF" Font-Bold="True" />
+                                <EditRowStyle BackColor="#7C6F57" />
+                                <FieldHeaderStyle BackColor="#D0D0D0" Font-Bold="True" />
+                                <Fields>
+                                    <asp:BoundField DataField="COMPUTER_SCIENCE_1" HeaderText="COMPUTER_SCIENCE_1" 
+                                        SortExpression="COMPUTER_SCIENCE_1" />
+                                    <asp:BoundField DataField="COMPUTER_SCIENCE2_1" 
+                                        HeaderText="COMPUTER_SCIENCE2_1" SortExpression="COMPUTER_SCIENCE2_1" />
+                                    <asp:BoundField DataField="MATHEMATICS1_1" HeaderText="MATHEMATICS1_1" 
+                                        SortExpression="MATHEMATICS1_1" />
+                                    <asp:BoundField DataField="MATHEMATICS2_1" HeaderText="MATHEMATICS2_1" 
+                                        SortExpression="MATHEMATICS2_1" />
+                                    <asp:BoundField DataField="PHYSICS1_1" HeaderText="PHYSICS1_1" 
+                                        SortExpression="PHYSICS1_1" />
+                                    <asp:BoundField DataField="PHYSICS2_1" HeaderText="PHYSICS2_1" 
+                                        SortExpression="PHYSICS2_1" />
+                                    <asp:BoundField DataField="FC_1" HeaderText="FC_1" SortExpression="FC_1" />
+                                    <asp:BoundField DataField="PHYSICS_PRAC_1" HeaderText="PHYSICS_PRAC_1" 
+                                        SortExpression="PHYSICS_PRAC_1" />
+                                    <asp:BoundField DataField="CS_PRAC_1" HeaderText="CS_PRAC_1" 
+                                        SortExpression="CS_PRAC_1" />
+                                    <asp:BoundField DataField="TOTAL_1" HeaderText="TOTAL_1" 
+                                        SortExpression="TOTAL_1" />
+                                </Fields>
+                                <FooterStyle BackColor="#1C5E55" Font-Bold="True" ForeColor="White" />
+                                <HeaderStyle BackColor="#1C5E55" Font-Bold="True" ForeColor="White" />
+                                <PagerStyle BackColor="#666666" ForeColor="White" HorizontalAlign="Center" />
+                                <RowStyle BackColor="#E3EAEB" />
+                            </asp:DetailsView>
+                            <asp:SqlDataSource ID="SqlDataSource1" runat="server" 
+                                ConnectionString="<%$ ConnectionStrings:addstudentConnectionString %>" 
+                                SelectCommand="SELECT [COMPUTER_SCIENCE_1], [COMPUTER_SCIENCE2_1], [MATHEMATICS1_1], [MATHEMATICS2_1], [PHYSICS1_1], [PHYSICS2_1], [FC_1], [PHYSICS_PRAC_1], [CS_PRAC_1], [TOTAL_1] FROM [addstudent] WHERE ([REGISTRATION_NO] = @REGISTRATION_NO)">
+                                <SelectParameters>
+                                    <asp:SessionParameter Name="REGISTRATION_NO" SessionField="NEW" Type="Int32" />
+                                </SelectParameters>
+                            </asp:SqlDataSource>
+                        </td>
+                        <td>
+                            <asp:DetailsView ID="DetailsView2" runat="server" AutoGenerateRows="False" 
+                                CellPadding="4" DataSourceID="SqlDataSource2" ForeColor="#333333" 
+                                GridLines="None" Height="50px" Width="125px" 
+                                onpageindexchanging="DetailsView2_PageIndexChanging">
+                                <AlternatingRowStyle BackColor="White" />
+                                <CommandRowStyle BackColor="#C5BBAF" Font-Bold="True" />
+                                <EditRowStyle BackColor="#7C6F57" />
+                                <FieldHeaderStyle BackColor="#D0D0D0" Font-Bold="True" />
+                                <Fields>
+                                    <asp:BoundField DataField="COMPUTER_SCIENCE_2" HeaderText="COMPUTER_SCIENCE_2" 
+                                        SortExpression="COMPUTER_SCIENCE_2" />
+                                    <asp:BoundField DataField="COMPUTER_SCIENCE2_2" 
+                                        HeaderText="COMPUTER_SCIENCE2_2" SortExpression="COMPUTER_SCIENCE2_2" />
+                                    <asp:BoundField DataField="MATHEMATICS1_2" HeaderText="MATHEMATICS1_2" 
+                                        SortExpression="MATHEMATICS1_2" />
+                                    <asp:BoundField DataField="MATHEMATICS2_2" HeaderText="MATHEMATICS2_2" 
+                                        SortExpression="MATHEMATICS2_2" />
+                                    <asp:BoundField DataField="PHYSICS_2" HeaderText="PHYSICS_2" 
+                                        SortExpression="PHYSICS_2" />
+                                    <asp:BoundField DataField="PHYSICS2_2" HeaderText="PHYSICS2_2" 
+                                        SortExpression="PHYSICS2_2" />
+                                    <asp:BoundField DataField="FC_2" HeaderText="FC_2" SortExpression="FC_2" />
+                                    <asp:BoundField DataField="PHYSICS_PRAC_2" HeaderText="PHYSICS_PRAC_2" 
+                                        SortExpression="PHYSICS_PRAC_2" />
+                                    <asp:BoundField DataField="CS_PRAC_2" HeaderText="CS_PRAC_2" 
+                                        SortExpression="CS_PRAC_2" />
+                                    <asp:BoundField DataField="TOTAL_2" HeaderText="TOTAL_2" 
+                                        SortExpression="TOTAL_2" />
+                                </Fields>
+                                <FooterStyle BackColor="#1C5E55" Font-Bold="True" ForeColor="White" />
+                                <HeaderStyle BackColor="#1C5E55" Font-Bold="True" ForeColor="White" />
+                                <PagerStyle BackColor="#666666" ForeColor="White" HorizontalAlign="Center" />
+                                <RowStyle BackColor="#E3EAEB" />
+                            </asp:DetailsView>
+                            <asp:SqlDataSource ID="SqlDataSource2" runat="server" 
+                                ConnectionString="<%$ ConnectionStrings:addstudentConnectionString %>" 
+                                SelectCommand="SELECT [COMPUTER_SCIENCE_2], [COMPUTER_SCIENCE2_2], [MATHEMATICS1_2], [MATHEMATICS2_2], [PHYSICS_2], [PHYSICS2_2], [FC_2], [PHYSICS_PRAC_2], [CS_PRAC_2], [TOTAL_2] FROM [addstudent] WHERE ([REGISTRATION_NO] = @REGISTRATION_NO)">
+                                <SelectParameters>
+                                    <asp:SessionParameter Name="REGISTRATION_NO" SessionField="NEW" Type="Int32" />
+                                </SelectParameters>
+                            </asp:SqlDataSource>
+                        </td>
+                        <td>
+                            <asp:DetailsView ID="DetailsView3" runat="server" AutoGenerateRows="False" 
+                                CellPadding="4" DataSourceID="SqlDataSource3" ForeColor="#333333" 
+                                GridLines="None" Height="50px" Width="125px">
+                                <AlternatingRowStyle BackColor="White" />
+                                <CommandRowStyle BackColor="#C5BBAF" Font-Bold="True" />
+                                <EditRowStyle BackColor="#7C6F57" />
+                                <FieldHeaderStyle BackColor="#D0D0D0" Font-Bold="True" />
+                                <Fields>
+                                    <asp:BoundField DataField="COMPUTER_SCIENCE_3" HeaderText="COMPUTER_SCIENCE_3" 
+                                        SortExpression="COMPUTER_SCIENCE_3" />
+                                    <asp:BoundField DataField="COMPUTER_SCIENCE_2_3" 
+                                        HeaderText="COMPUTER_SCIENCE_2_3" SortExpression="COMPUTER_SCIENCE_2_3" />
+                                    <asp:BoundField DataField="COMPUTER_SCIENCE_3_3" 
+                                        HeaderText="COMPUTER_SCIENCE_3_3" SortExpression="COMPUTER_SCIENCE_3_3" />
+                                    <asp:BoundField DataField="MATHEMATICS_3" HeaderText="MATHEMATICS_3" 
+                                        SortExpression="MATHEMATICS_3" />
+                                    <asp:BoundField DataField="MATHEMATICS_2_3" HeaderText="MATHEMATICS_2_3" 
+                                        SortExpression="MATHEMATICS_2_3" />
+                                    <asp:BoundField DataField="MATHEMATICS_3_3" HeaderText="MATHEMATICS_3_3" 
+                                        SortExpression="MATHEMATICS_3_3" />
+                                    <asp:BoundField DataField="FC_2_3" HeaderText="FC_2_3" 
+                                        SortExpression="FC_2_3" />
+                                    <asp:BoundField DataField="CS_PRAC_3" HeaderText="CS_PRAC_3" 
+                                        SortExpression="CS_PRAC_3" />
+                                    <asp:BoundField DataField="TOTAL_3" HeaderText="TOTAL_3" 
+                                        SortExpression="TOTAL_3" />
+                                </Fields>
+                                <FooterStyle BackColor="#1C5E55" Font-Bold="True" ForeColor="White" />
+                                <HeaderStyle BackColor="#1C5E55" Font-Bold="True" ForeColor="White" />
+                                <PagerStyle BackColor="#666666" ForeColor="White" HorizontalAlign="Center" />
+                                <RowStyle BackColor="#E3EAEB" />
+                            </asp:DetailsView>
+                            <asp:SqlDataSource ID="SqlDataSource3" runat="server" 
+                                ConnectionString="<%$ ConnectionStrings:addstudentConnectionString %>" 
+                                SelectCommand="SELECT [COMPUTER_SCIENCE_3], [COMPUTER_SCIENCE_2_3], [COMPUTER_SCIENCE_3_3], [MATHEMATICS_3], [MATHEMATICS_2_3], [MATHEMATICS_3_3], [FC_2_3], [CS_PRAC_3], [TOTAL_3] FROM [addstudent] WHERE ([REGISTRATION_NO] = @REGISTRATION_NO)">
+                                <SelectParameters>
+                                    <asp:SessionParameter Name="REGISTRATION_NO" SessionField="NEW" Type="Int32" />
+                                </SelectParameters>
+                            </asp:SqlDataSource>
+                        </td>
+                        <td>
+                            <asp:DetailsView ID="DetailsView4" runat="server" AutoGenerateRows="False" 
+                                CellPadding="4" DataSourceID="SqlDataSource4" ForeColor="#333333" 
+                                GridLines="None" Height="50px" Width="125px">
+                                <AlternatingRowStyle BackColor="White" />
+                                <CommandRowStyle BackColor="#C5BBAF" Font-Bold="True" />
+                                <EditRowStyle BackColor="#7C6F57" />
+                                <FieldHeaderStyle BackColor="#D0D0D0" Font-Bold="True" />
+                                <Fields>
+                                    <asp:BoundField DataField="COMPUTER_SCIENCE_4" HeaderText="COMPUTER_SCIENCE_4" 
+                                        SortExpression="COMPUTER_SCIENCE_4" />
+                                    <asp:BoundField DataField="COMPUTER_SCIENCE_2_4" 
+                                        HeaderText="COMPUTER_SCIENCE_2_4" SortExpression="COMPUTER_SCIENCE_2_4" />
+                                    <asp:BoundField DataField="COMPUTER_SCIENCE_3_4" 
+                                        HeaderText="COMPUTER_SCIENCE_3_4" SortExpression="COMPUTER_SCIENCE_3_4" />
+                                    <asp:BoundField DataField="MATHEMATICS_4" HeaderText="MATHEMATICS_4" 
+                                        SortExpression="MATHEMATICS_4" />
+                                    <asp:BoundField DataField="MATHEMATICS_2_4" HeaderText="MATHEMATICS_2_4" 
+                                        SortExpression="MATHEMATICS_2_4" />
+                                    <asp:BoundField DataField="MATHEMATICS_3_4" HeaderText="MATHEMATICS_3_4" 
+                                        SortExpression="MATHEMATICS_3_4" />
+                                    <asp:BoundField DataField="FC_2_4" HeaderText="FC_2_4" 
+                                        SortExpression="FC_2_4" />
+                                    <asp:BoundField DataField="CS_PRAC_4" HeaderText="CS_PRAC_4" 
+                                        SortExpression="CS_PRAC_4" />
+                                    <asp:BoundField DataField="TOTAL_4" HeaderText="TOTAL_4" 
+                                        SortExpression="TOTAL_4" />
+                                </Fields>
+                                <FooterStyle BackColor="#1C5E55" Font-Bold="True" ForeColor="White" />
+                                <HeaderStyle BackColor="#1C5E55" Font-Bold="True" ForeColor="White" />
+                                <PagerStyle BackColor="#666666" ForeColor="White" HorizontalAlign="Center" />
+                                <RowStyle BackColor="#E3EAEB" />
+                            </asp:DetailsView>
+                            <asp:SqlDataSource ID="SqlDataSource4" runat="server" 
+                                ConnectionString="<%$ ConnectionStrings:addstudentConnectionString %>" 
+                                SelectCommand="SELECT [COMPUTER_SCIENCE_4], [COMPUTER_SCIENCE_2_4], [COMPUTER_SCIENCE_3_4], [MATHEMATICS_4], [MATHEMATICS_2_4], [MATHEMATICS_3_4], [FC_2_4], [CS_PRAC_4], [TOTAL_4] FROM [addstudent] WHERE ([REGISTRATION_NO] = @REGISTRATION_NO)">
+                                <SelectParameters>
+                                    <asp:SessionParameter Name="REGISTRATION_NO" SessionField="NEW" Type="Int32" />
+                                </SelectParameters>
+                            </asp:SqlDataSource>
+                        </td>
+                    </tr>
+                </table>
+            </asp:Panel>
+          
+            </div>
+          
+        </div>
+        <div class="clear" style="background-image: inherit">
+        </div>
+    </div>
+    <div class="footer">
+        
+    </div>
+    </form>
+</body>
+</html>
